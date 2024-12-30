@@ -1,0 +1,15 @@
+services:
+  # Atlas Local service - includes the MongoDB server and Atlas Search and Vector Search
+  mongodb:
+    image: mongodb/mongodb-atlas-local
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=user
+      - MONGODB_INITDB_ROOT_PASSWORD=pass
+      # The line below is optional. It's useful in case something goes wrong during initialization
+      # so that the errors thrown by the runner and the init scripts are logged to the console
+      - RUNNER_LOG_FILE=/dev/stderr
+    ports:
+      - 27018:27017
+    volumes:
+      - ${PWD}/upload/restaurants.json:/tmp/restaurants.json      
+      - ./init:/docker-entrypoint-initdb.d
