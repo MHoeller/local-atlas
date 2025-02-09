@@ -1,6 +1,7 @@
 services:
   # Atlas Local service - includes the MongoDB server and Atlas Search and Vector Search
   mongodb:
+    hostname: mongodb
     image: mongodb/mongodb-atlas-local
     environment:
       - MONGODB_INITDB_ROOT_USERNAME=user
