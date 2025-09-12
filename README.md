@@ -39,7 +39,7 @@ This initiates the following processes:
 - **[00-import-from-export.sh](init/00-import-from-export.sh)**:  
   Imports data from a MongoDB export (a JSON file) using `mongoimport`.  
 
-- **[01-import-explicit-inserts.sh](init/01-import-explicit-inserts.sh)**:  
+- **[01-import-explicit-inserts.js](init/01-import-explicit-inserts.js)**:  
   Demonstrates an alternative approach for seeding data using explicit `insertMany` operations.  
 
 - **[02-create-search-index.js](init/02-create-search-index.js)**:  
